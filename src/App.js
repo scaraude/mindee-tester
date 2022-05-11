@@ -9,8 +9,7 @@ function App() {
 
   useEffect(() => {
     console.log(dummyPDF, typeof dummyPDF);
-    getImagesFromPDF("http://localhost:9000/static/organisations/6d883f43-7a9a-459d-925f-f55be9efae25/documents-to-control/77c01714-10d5-451c-9e1e-1d14378471f1.pdf").then((images) => {
-      console.log("images", images, typeof images);
+    getImagesFromPDF(dummyPDF).then((images) => {
       setImages(images);
     });
   }, []);
